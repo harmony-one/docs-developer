@@ -1,7 +1,7 @@
 # Create or import wallet
 
 {% hint style="info" %}
-Throughout this guide, we will use the following syntax: 
+Throughout this guide, we will use the following syntax:
 
 * `./hmy`:  This is the CLI program
 * `./hmy.sh --` : This is the command to use the CLI with a shell wrapper \(for macOS\)
@@ -46,12 +46,12 @@ Repeat the passphrase:
 exhibit effort describe first own warfare electric employ expire same mango lunar chief recall assume team day loan confirm orient antique robot obey leaf
 ```
 
-This creates a keystore at the following directory:`$(hmy keys location)/account-name1/UTC--2019-09-16T21-25-35.297331000Z--678e7ea3dcb5f4e9724c0e761843572f10c49b73` 
+This creates a keystore at the following directory:`$(hmy keys location)/account-name1/UTC--2019-09-16T21-25-35.297331000Z--678e7ea3dcb5f4e9724c0e761843572f10c49b73`
 
 When creating keys this way, `hmy` will ask you to provide a passphrase.‌ Make sure you keep track of this passphrase for future use because the passphrase is used to decrypt the keystore when signing transactions. Also make sure you save the seed phrase, also called a mnemonic.
 
 {% hint style="info" %}
-If you don't provide a passphrase using the `--use-own-passphrase` flag, the default passphrase is an empty string `""`. The passphrase is used to decrypt the keystore when signing transactions. 
+If you don't provide a passphrase using the `--use-own-passphrase` flag, the default passphrase is an empty string `""`. The passphrase is used to decrypt the keystore when signing transactions.
 {% endhint %}
 
 To know where your wallet file has been created, run the following command:
@@ -88,7 +88,7 @@ $ ./hmy.sh keys list
 
 ‌You might have an existing keystore made by Harmony's old `wallet.sh` program that ends with ".key" in the file name \(example\):
 
- `one16qsd5ant9v94jrs89mruzx62h7ekcfxmduh2rx.key` 
+`one16qsd5ant9v94jrs89mruzx62h7ekcfxmduh2rx.key`
 
 Or that starts with "UTC" in the file name \(example\):
 
@@ -96,26 +96,30 @@ Or that starts with "UTC" in the file name \(example\):
 
 Both these files can be imported into `hmy` using the command `import-ks` as shown below.
 
+{% hint style="warning" %}
+Note that the --passphrase flag only enables a password prompt after the command is entered, there are no other arguments necessary here \(if you dont put --passphrase flag in the command it will assume no password needed and will not prompt you for one, which basically means that your wallet keyfile will not be password protected!\).
+{% endhint %}
+
 #### Using the Binary:
 
 ```text
-$ ./hmy keys import-ks <absolute_path_to_keystore> --passphrase <passphrase>
+$ ./hmy keys import-ks <absolute_path_to_keystore> --passphrase
 ```
 
 #### Using the Shell Script:
 
 ```text
-$ ./hmy.sh keys import-ks <absolute_path_to_keystore> --passphrase <passphrase>
+$ ./hmy.sh keys import-ks <absolute_path_to_keystore> --passphrase
 ```
 
 #### Example:
 
 ```text
 If you are a FN runner:
-./hmy keys import-ks /root/.hmy/keystore/UTC--2020-01-15T01-02-06.606670000Z--9689a0711642bf08ea92ed98d552f0c1b8c8cefb --passphrase ""
+./hmy keys import-ks /root/.hmy/keystore/UTC--2020-01-15T01-02-06.606670000Z--9689a0711642bf08ea92ed98d552f0c1b8c8cefb --passphrase
 
 ./hmy keys import-ks /home/harmony/one16qsd5ant9v94jrs89mruzx62h7ekcfxmduh2rx.key --passphrase ""
-$ ./hmy keys import-ks /home/harmony/UTC--2020-01-15T01-02-06.606670000Z--9689a0711642bf08ea92ed98d552f0c1b8c8cefb --passphrase ""
+$ ./hmy keys import-ks /home/harmony/UTC--2020-01-15T01-02-06.606670000Z--9689a0711642bf08ea92ed98d552f0c1b8c8cefb --passphrase
 ```
 
 ‌Keep in mind that you should know the passphrase associated with the imported keystore and pass it as a parameter as shown in the commands above. For keystores created by Harmony's `wallet.sh`, the default passphrase is an empty string; this matters for signing transactions.‌
@@ -133,19 +137,19 @@ You can import the key with an optional name and passphrase
 #### Using the Binary:
 
 ```text
-$ ./hmy keys import-private-key <secp256k1_private_key> [wallet_name] [--passphrase "<passphrase>"] 
+$ ./hmy keys import-private-key <secp256k1_private_key> [wallet_name] [--passphrase]
 ```
 
 #### Using the Shell Scripts:
 
 ```text
-$ ./hmy.sh keys import-private-key <secp256k1_private_key> [wallet_name] [--passphrase <passphrase>] 
+$ ./hmy.sh keys import-private-key <secp256k1_private_key> [wallet_name] [--passphrase]
 ```
 
 #### Example:
 
 ```text
-$ ./hmy keys import-private-key b8798ca0a56ce16517ea37c6b1229cbb67cf0e022c423b044fe8f537830d8be5 my_wallet_name_here --passphrase myDesiredPassword‌
+$ ./hmy keys import-private-key b8798ca0a56ce16517ea37c6b1229cbb67cf0e022c423b044fe8f537830d8be5 my_wallet_name_here --passphrase
 ```
 
 If no account name is provided, a random word concatenated with `-imported` will be used. If no passphrase is provided, the default passphrase will be used \(which is blank\). Note that the CLI currently only supports importing secp256k1 private keys.
