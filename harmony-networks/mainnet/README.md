@@ -1,6 +1,2 @@
----
-description: Mainnet related content.
----
-
-# Mainnet
+# Mainnet Dev2
 
