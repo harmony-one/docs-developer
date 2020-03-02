@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Additional Documentation](documentation.md)
 
 ## Harmony Networks
 
@@ -9,6 +8,7 @@
 
 ## Developers
 
+* [Which ONE are you?](developers/which-one-are-you.md)
 * [API](developers/api/README.md)
   * [Methods](developers/api/methods/README.md)
     * [Account Methods](developers/api/methods/account-methods/README.md)
@@ -115,7 +115,7 @@
     * [Download & setup](developers/wallet-guides/safepal/download-and-setup.md)
     * [Create/import account](developers/wallet-guides/safepal/create-import-account.md)
     * [Send transaction](developers/wallet-guides/safepal/send-transaction.md)
-* [Which ONE are you?](developers/which-one-are-you.md)
+* [Additional Documentation](developers/documentation.md)
 
 ## Archived/Obsolete
 
