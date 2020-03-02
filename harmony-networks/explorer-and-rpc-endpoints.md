@@ -29,6 +29,6 @@ Open Staking Testnet RPC Endpoints
 
 * Shard 0: [https://api.s0.os.hmny.io](https://api.s0.os.hmny.io)
 * Shard 1: [https://api.s1.os.hmny.io](https://api.s1.os.hmny.io)
-* Shard 2: https://api.s2.os.hmny.io
+* Shard 2: [https://api.s2.os.hmny.io](https://api.s2.os.hmny.io)
 * Shard 3: h[ttps://api.s3.os.hmny.io](ttps://api.s3.os.hmny.io)
 

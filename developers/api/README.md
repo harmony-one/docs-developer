@@ -9,7 +9,7 @@ description: >-
 {% hint style="success" %}
 **Complete documentation for Harmony's API's can be found** [**here**](https://apitest.harmony.one) **including sample code and curl commands and code.** [**https://apitest.harmony.one**](https://apitest.harmony.one)\*\*\*\*
 
- **For API's developed as part of open staking please see** [**here**](https://documenter.getpostman.com/view/9974547/SzKZsboq?version=latest)\*\*\*\*
+ **For API's developed as part of open staking please see** [**here**](https://api.os.hmny.io/)\*\*\*\*
 {% endhint %}
 
 ## Development Environments
