@@ -2,7 +2,7 @@
 
 ## What is Harmony?
 
-Our vision is _Open Consensus for 10 Billion People_.
+Harmony is a decentralized blockchain ecosystem where digital assets can be securely managed and trustless computation can be efficiently executed, supporting the decentralized economy for billions of people.
 
 Our open infrastructure is a high-throughput, low-latency, and low-fee consensus platform designed to power decentralized economies of the future.
 
